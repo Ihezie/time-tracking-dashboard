@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+:root {
+  /* ### Primary */
+  --blue: hsl(246, 80%, 60%);
+  --Light-red-work: hsl(15, 100%, 70%);
+  --Soft-blue-play: hsl(195, 74%, 62%);
+  --Light-red-study: hsl(348, 100%, 68%);
+  --Lime-green-exercise: hsl(145, 58%, 55%);
+  --Violet-social: hsl(264, 64%, 52%);
+  --Soft-orange-self-care: hsl(43, 84%, 65%);
+
+  /* ### Neutral */
+
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+}
+*{
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .2s ease;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+  background-color: var(--Very-dark-blue);
+}
+#container{
+  width: 80%;
+  height: 50rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 950px) {
+  #container{
+    height: 38rem;
+    width: 88%;
+  }
+}
+@media (max-width: 770px) {
+  #container{
+    height: auto;
+    top: auto;
+    transform: none;
+    position: static;
+    margin: 0 auto;
+    grid-template-columns: 100%;
+    grid-template-rows: 19rem repeat(6, 17rem);
+    padding: 8rem 0;
+  }
+}
+@media (max-width: 350px) {
+  html{
+    font-size: 55%;
+  }
+}
