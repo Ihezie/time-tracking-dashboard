@@ -1,25 +1,26 @@
 import Attribution from "./components/Attribution";
 import Card from "./components/Card";
 import ProfileCard from "./components/ProfileCard";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import backgroundThemes from "./backgroundThemes";
+import stats from "./data";
 
 function App() {
-  const [stats, setStats] = useState([]);
+  // const [stats, setStats] = useState([]);
   const [timeFrame, setTimeFrame] = useState("daily");
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("src/data.json");
-        const data = await response.json();
-        setStats(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch("src/data.json");
+  //       const data = await response.json();
+  //       setStats(data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
 
   return (
     <>
